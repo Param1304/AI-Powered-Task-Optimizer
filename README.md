@@ -1,8 +1,3 @@
-# AI-Powered-Task-Optimizer
-Here's a **detailed README** for your **AI-powered Task Optimizer** project, including the **file structure** and essential **Git commands**.
-
----
-
 # **AI-Powered Task Optimizer 🚀**  
 A **Django-based AI-driven web application** that detects **mood through text and live facial expressions**. It features **real-time video analysis, a data visualization dashboard, and intelligent task suggestions** to enhance productivity and mental well-being.  
 

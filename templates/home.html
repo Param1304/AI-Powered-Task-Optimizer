@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Task Optimizer - Home</title>
+    {% comment %} <link rel="stylesheet" href="static/style.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body> 
+    <div class="container">
+        <h1>AI-Powered Task Optimizer</h1>
+        <p>Enhance productivity by analyzing employee mood and suggesting tasks accordingly.</p>
+        <!-- ... existing code ... -->
+        <div class="grid-container">
+            <div class="grid-item" onclick="location.href='{% url 'detect_mood' %}'">
+                <h2>Detect Mood</h2>
+            </div>
+            <div class="grid-item" onclick="location.href='{% url 'suggest_task' mood=mood %}'">
+                <h2>Suggest Task</h2>
+            </div>
+            <div class="grid-item" onclick="location.href='{% url 'analyse_data' %}'">
+                <h2>Analyze Data</h2>
+            </div>
+            <div class="grid-item" onclick="location.href='{% url 'detect_face' %}'">
+                <h2>Analyze Face</h2>
+            </div>
+            {% comment %} {% comment % }<div class="grid-item" onclick="location.href='{% url 'analyse_face' %}'">
+                <h2>Analyze Face</h2>
+            </div>
+            </div>{% endcomment %}
+        </div>
+    </div>
+
+</body>
+</html>
+

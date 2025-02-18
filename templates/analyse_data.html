@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Analysis</title>
+    <link rel="stylesheet" href="{% static 'analysis.css' %}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Mood Analysis</h1>
+        
+        <div class="chart-container">
+            <div id="lineChart"></div>
+        </div>
+        
+        <div class="chart-container">
+            <div id="barChart"></div>
+        </div>
+        
+        <a href="{% url 'home' %}" class="back-btn">Back to Home</a>
+    </div>
+
+    <script>
+        // Line Chart
+        var lineData = {
+            x: JSON.parse('{{ timestamps|safe }}'),
+            y: JSON.parse('{{ moods|safe }}'),
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'Mood Over Time',
+            line: {color:'#333'}
+        };
+        // Shapes colored areas
+        var shapes = [
+            {
+                type: 'rect',
+                xref: 'paper',
+                yref: 'y',
+                x0: 0,
+                x1: 1,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(144, 238, 144, 0.3)',
+                line: {width: 0}
+            },
+            {
+                type: 'rect',
+                xref: 'paper',
+                yref: 'y',
+                x0: 0,
+                x1: 1,
+                y0: 1,
+                y1: 2,
+                fillcolor: 'rgba(255, 255, 153, 0.3)',
+                line: {width: 0}
+            },
+            {
+                type: 'rect',
+                xref: 'paper',
+                yref: 'y',
+                x0: 0,
+                x1: 1,
+                y0: 2,
+                y1: 3,
+                fillcolor: 'rgba(255, 99, 71, 0.3)',
+                line: {width: 0}
+            }
+        ];
+
+        // Bar Chart
+        var barData = [{
+            x: JSON.parse('{{ mood_categories|safe }}'),
+            y: JSON.parse('{{ mood_counts|safe }}'),
+            type: 'bar',
+            marker: {
+                color: JSON.parse('{{ mood_categories|safe }}').map(mood => {
+                    switch(mood) {
+                        case 'Normal': return '#4CAF50'; 
+                        case 'Anxiety': return '#FFEB3B'; 
+                        case 'Depression': return '#FF9800'; 
+                        case 'Suicidal': return '#F44336';
+                        default: return '#777';
+                    }
+                })
+            }
+        }];
+
+    
+        var lineLayout = {
+            title: 'Mood Over Time',
+            xaxis: { title: 'Time' },
+            yaxis: { 
+                title: 'Mood',
+                tickvals: [0, 1, 2, 3],
+                ticktext: ['Normal', 'Anxiety', 'Depression', 'Suicidal']
+            },
+            shapes:shapes
+        };
+
+        var barLayout = {
+            title: 'Mood Distribution',
+            xaxis: { title: 'Mood' },
+            yaxis: { title: 'Count' }
+        };
+
+        Plotly.newPlot('lineChart', [lineData], lineLayout);
+        Plotly.newPlot('barChart', barData, barLayout);
+    </script>
+</body>
+</html>

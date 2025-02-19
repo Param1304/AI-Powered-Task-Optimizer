@@ -120,26 +120,6 @@ Open **http://127.0.0.1:8000/** in your browser.
 
 ---
 
-## **🛠️ Useful Git Commands**  
-
-### **Initialize a New Repository**  
-```sh
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/your-username/task_optimizer.git
-git push -u origin main
-```
-
-### **Common Git Commands**  
-```sh
-git status               # Check changes
-git add .                # Stage all changes
-git commit -m "Message"  # Commit changes
-git pull origin main     # Pull latest changes
-git push origin main     # Push changes
-```
 
 ---
 
@@ -151,14 +131,5 @@ git push origin main     # Push changes
 ---
 
 ## **📌 Contributors**  
-👤 **[Your Name]** - Developer  
-📧 Email: your-email@example.com  
-
----
-
-## **📜 License**  
-This project is **open-source** under the **MIT License**.  
-
----
-
-This **README** is **structured**, **technical**, and **professional**, making it perfect for **GitHub, LinkedIn, or project documentation**. 🚀 Let me know if you need any modifications! 😃
+👤 **Param Parekh** - Developer  
+📧 Email: parammparekh13@gmail.com 

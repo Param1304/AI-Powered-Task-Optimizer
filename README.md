@@ -1,18 +1,24 @@
-AI-Powered Task Optimizer 🚀
-A Django-based AI-driven web application that detects mood through text and live facial expressions. It features real-time video analysis, a data visualization dashboard, and intelligent task suggestions to enhance productivity and mental well-being.
 
-📌 Features
-✅ Text-Based Mood Classification using BERT + Cosine Similarity
-✅ Live Facial Emotion Detection with OpenCV (Face, Smile, and Eye Detection)
-✅ Real-Time Video Streaming using Django's StreamingHttpResponse
-✅ Interactive Data Analysis Dashboard with Plotly.js
-✅ Task Suggestions Based on Mood
-✅ Django Backend for Data Storage (SQLite)
 
-📂 Project Structure
-php
-Copy
-Edit
+# **AI-Powered Task Optimizer 🚀**  
+A **Django-based AI-driven web application** that detects **mood through text and live facial expressions**. It features **real-time video analysis, a data visualization dashboard, and intelligent task suggestions** to enhance productivity and mental well-being.  
+
+---
+
+## **📌 Features**  
+
+✅ **Text-Based Mood Classification** using **BERT + Cosine Similarity**  
+✅ **Live Facial Emotion Detection** with **OpenCV (Face, Smile, and Eye Detection)**  
+✅ **Real-Time Video Streaming** using Django's `StreamingHttpResponse`  
+✅ **Interactive Data Analysis Dashboard** with **Plotly.js**  
+✅ **Task Suggestions Based on Mood**  
+✅ **Django Backend for Data Storage** (SQLite)  
+
+---
+
+## **📂 Project Structure**  
+
+```
 task_optimizer/
 │── myapp/                      # Main Django App
 │   ├── migrations/             # Database migrations
@@ -46,89 +52,111 @@ task_optimizer/
 │
 │── db.sqlite3                     # SQLite Database
 │── manage.py                      # Django Management Script
-🚀 Installation & Setup
-1️⃣ Clone the Repository
-sh
-Copy
-Edit
+```
+
+---
+
+## **🚀 Installation & Setup**  
+
+### **1️⃣ Clone the Repository**  
+```sh
 git clone https://github.com/your-username/task_optimizer.git
 cd task_optimizer
-2️⃣ Create a Virtual Environment
-sh
-Copy
-Edit
+```
+
+### **2️⃣ Create a Virtual Environment**  
+```sh
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
 venv\Scripts\activate      # Windows
-3️⃣ Install Dependencies
-sh
-Copy
-Edit
+```
+
+### **3️⃣ Install Dependencies**  
+```sh
 pip install -r requirements.txt
-4️⃣ Run Migrations & Start Server
-sh
-Copy
-Edit
+```
+
+### **4️⃣ Run Migrations & Start Server**  
+```sh
 python manage.py migrate
 python manage.py runserver
-5️⃣ Access the Web App
-Open http://127.0.0.1:8000/ in your browser.
+```
 
-🖥️ Usage
-🌟 Text-Based Mood Detection
-1️⃣ Navigate to Detect Mood
-2️⃣ Enter a short text or answer psychological questions
-3️⃣ AI (BERT Model) detects mood based on semantic similarity
-4️⃣ The detected mood is stored and analyzed
+### **5️⃣ Access the Web App**  
+Open **http://127.0.0.1:8000/** in your browser.
 
-🎭 Real-Time Facial Emotion Recognition
-1️⃣ Navigate to Detect Face
-2️⃣ The camera captures facial expressions, eye activity, and brightness
-3️⃣ Haar cascades (face, smile, eye) classify moods in real-time
-4️⃣ The result is displayed and logged
+---
 
-📊 Mood Analysis Dashboard
-1️⃣ Navigate to Analyse Data
-2️⃣ Line Chart 📈 - Tracks mood changes over time
-3️⃣ Bar Chart 📊 - Shows mood distribution
+## **🖥️ Usage**  
 
-💡 AI-Based Task Suggestions
-1️⃣ Based on detected mood, relevant tasks are suggested
+### **🌟 Text-Based Mood Detection**  
+1️⃣ Navigate to `Detect Mood`  
+2️⃣ Enter a short text or answer psychological questions  
+3️⃣ AI (BERT Model) detects mood based on semantic similarity  
+4️⃣ The detected mood is stored and analyzed  
 
-📌 Key Technologies Used
-✅ Backend: Django (Python)
-✅ Frontend: HTML, CSS, JavaScript
-✅ Computer Vision: OpenCV (Face, Smile, Eye Detection)
-✅ Machine Learning: BERT + Cosine Similarity (Text Analysis)
-✅ Data Visualization: Plotly.js
-✅ Database: SQLite
+### **🎭 Real-Time Facial Emotion Recognition**  
+1️⃣ Navigate to `Detect Face`  
+2️⃣ The camera captures **facial expressions, eye activity, and brightness**  
+3️⃣ Haar cascades (`face`, `smile`, `eye`) classify moods in **real-time**  
+4️⃣ The result is displayed and logged  
 
-🛠️ Useful Git Commands
-Initialize a New Repository
-sh
-Copy
-Edit
+### **📊 Mood Analysis Dashboard**  
+1️⃣ Navigate to `Analyse Data`  
+2️⃣ **Line Chart** 📈 - Tracks mood changes over time  
+3️⃣ **Bar Chart** 📊 - Shows mood distribution  
+
+### **💡 AI-Based Task Suggestions**  
+1️⃣ Based on detected mood, relevant **tasks** are suggested  
+
+---
+
+## **📌 Key Technologies Used**  
+
+✅ **Backend:** Django (Python)  
+✅ **Frontend:** HTML, CSS, JavaScript  
+✅ **Computer Vision:** OpenCV (Face, Smile, Eye Detection)  
+✅ **Machine Learning:** BERT + Cosine Similarity (Text Analysis)  
+✅ **Data Visualization:** Plotly.js  
+✅ **Database:** SQLite  
+
+---
+
+## **🛠️ Useful Git Commands**  
+
+### **Initialize a New Repository**  
+```sh
 git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
 git remote add origin https://github.com/your-username/task_optimizer.git
 git push -u origin main
-Common Git Commands
-sh
-Copy
-Edit
+```
+
+### **Common Git Commands**  
+```sh
 git status               # Check changes
 git add .                # Stage all changes
 git commit -m "Message"  # Commit changes
 git pull origin main     # Pull latest changes
 git push origin main     # Push changes
-🚀 Future Enhancements
-🔹 Sentiment Analysis with LLMs
-🔹 More Advanced Facial Expression Recognition
-🔹 Custom AI Models for Task Optimization
+```
 
-📌 Contributors
-👤 Param Parekh - Developer
+---
+
+## **🚀 Future Enhancements**  
+🔹 **Sentiment Analysis with LLMs**  
+🔹 **More Advanced Facial Expression Recognition**  
+🔹 **Custom AI Models for Task Optimization**  
+
+---
+
+## **📌 Contributors**  
+👤 **Param Parekh** - Developer  
 📧 Email: parammparekh13@gmail.com
 
+---
+
+## **📜 License**  
+This project is **open-source** under the **MIT License**.  

@@ -1,1 +1,7 @@
-
+Django>=4.2,<5.0
+numpy>=1.26
+opencv-python>=4.9
+transformers>=4.38
+torch>=2.2
+scikit-learn>=1.4
+plotly>=5.19
